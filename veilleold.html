@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Veille IPTV – Estebàn Olivero</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root{--accent:#1677ff}
+
+    .dark-mode body{background:#0b1220;color:#cfe3ff}
+    .dark-mode .navbar{background:rgba(255,255,255,0.02)}
+    .dark-mode .bg-body-tertiary{background:rgba(255,255,255,0.02) !important}
+    .dark-mode .hero-mini{background:linear-gradient(rgba(8,15,40,.85),rgba(8,15,40,.85)),url('intro-bg.jpg') center/cover;color:#fff}
+    .dark-mode .card{background:#0e1530;color:#e6eefc;box-shadow:0 6px 20px rgba(0,0,0,.6)}
+    .dark-mode a{color:#9ecbff}
+    .dark-mode footer{background:#040612;color:#9fb4d9}
+
+    .dark-mode .text-muted,
+    .dark-mode .small,
+    .dark-mode p,
+    .dark-mode li,
+    .dark-mode .lead {
+      color: rgba(255,255,255,0.78) !important
+    }
+
+    .dark-mode h1,
+    .dark-mode h2,
+    .dark-mode h3,
+    .dark-mode h4,
+    .dark-mode h5,
+    .dark-mode h6 {
+      color: #e6eefc !important
+    }
+
+    .dark-mode .nav-link,
+    .dark-mode .navbar-brand {
+      color: #e6eefc !important
+    }
+
+    article[id]{ scroll-margin-top:5.5rem; }
+
+    .hero-mini{
+      padding:64px 0;
+      background:linear-gradient(rgba(8,15,40,.7),rgba(8,15,40,.7)),url('intro-bg.jpg') center/cover;
+      color:#fff
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(12px);
+      transition:opacity .6s,transform .6s
+    }
+
+    .show{
+      opacity:1;
+      transform:none
+    }
+
+    footer{
+      background:#0b1220;
+      color:#c9d3e7
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+  <div class="container d-flex align-items-center">
+    <a class="navbar-brand fw-bold" href="index.html#blog">← Portfolio Estebàn</a>
+    <div class="ms-auto d-flex align-items-center gap-2">
+      <a class="btn btn-sm btn-primary" href="index.html#blog">Retour</a>
+      <button id="theme-toggle" class="btn btn-sm btn-outline-secondary" title="Basculer thème">
+        <i class="bi bi-moon-fill"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero-mini text-center">
+  <div class="container">
+    <h1 class="display-6 fw-bold">Veille technologique – IPTV (2026)</h1>
+    <p class="lead">Articles complets : Résumé • Démo/mesure • Analyse • Risques • Applicabilité • Sources</p>
+  </div>
+</header>
+
+<main class="py-5">
+  <div class="container">
+
+    <article class="mb-5 reveal">
+
+      <h2>Veille technologique – IPTV (Internet Protocol Television) — 2026</h2>
+      <p class="text-muted small">mise à jour : février 2026 • auteur : Estebàn Olivero</p>
+
+      <h3 id="definition">1. Qu'est-ce que l'IPTV ?</h3>
+      <p>L’IPTV (Internet Protocol Television) est une technologie de diffusion de la télévision et de contenus vidéo via Internet (protocoles IP) plutôt que par satellite, câble ou hertzien. Elle permet de recevoir :</p>
+      <ul>
+        <li>des chaînes TV en direct,</li>
+        <li>de la vidéo à la demande (VOD),</li>
+        <li>de la TV différée (replay ou time-shift).</li>
+      </ul>
+      <p>La technologie est légale en soi, mais la légalité dépend du contenu diffusé (offres avec droits vs contenus piratés).</p>
+
+      <h3 id="marche">2. Le marché mondial et les tendances</h3>
+      <p>Le marché mondial de l’IPTV est en forte croissance :</p>
+      <ul>
+        <li>Il valait environ 114 milliards USD en 2026 et devrait atteindre plus de 500 milliards USD d'ici 2035, avec une croissance annuelle très élevée.</li>
+        <li>La VOD (Vidéo à la demande) est le segment dominant (~46 % du marché) car les utilisateurs privilégient la flexibilité de visionnage.</li>
+        <li>La TV en direct, notamment les sports, reste un usage clé (~25 % des revenus).</li>
+        <li>La forte adoption s'explique par la multiplicité des écrans (smart TV, mobiles, box Android…), la personnalisation des contenus, et les modèles d'abonnement variés.</li>
+      </ul>
+
+      <h3 id="legalite">3. Légalité vs illégalité : nuances et réglementation</h3>
+      <p>La technologie IPTV en elle-même est neutre et légale. Ce qui crée des tensions, c'est lorsqu'elle est utilisée pour diffuser des contenus protégés sans autorisation, ce qui constitue du piratage.</p>
+      <h4>3.1. Ce qui est légal</h4>
+      <ul>
+        <li>Services IPTV officiels proposant des contenus avec droits de diffusion (ex : Canal+, Molotov TV, Freebox TV).</li>
+        <li>Applications et plateformes diffusant leurs propres catalogues ou avec autorisation des ayants droit.</li>
+      </ul>
+      <h4>3.2. Ce qui est illégal</h4>
+      <ul>
+        <li>Services qui diffusent des chaînes payantes (sport, films, séries) sans licence.</li>
+        <li>Offres pirates vendues à bas prix via sites ou boîtiers.</li>
+      </ul>
+      <p>Les autorités considèrent ces offres illégales comme une contrefaçon des droits d'auteur, avec des risques juridiques pour les fournisseurs et potentiellement pour les utilisateurs.</p>
+
+      <h3 id="actualite">4. Actualité : lutte contre les services IPTV illégaux</h3>
+      <p>La lutte contre l'IPTV illégale s'intensifie en Europe et dans le monde :</p>
+      <ul>
+        <li>En France, plus de 5 000 sites ont été bloqués depuis janvier 2025 par l'Autorité de régulation de la communication audiovisuelle (ARCOM).</li>
+        <li>Le blocage des noms de domaine et l'action contre les intermédiaires techniques (DNS, VPN) sont désormais utilisés pour réduire l'accès aux services illégaux.</li>
+        <li>Le phénomène reste dynamique : malgré une baisse des usages illicites, l'IPTV pirate continue à se réinventer via de nouveaux noms de domaines et moyens de contournement.</li>
+        <li>En Suède et en Europe, des gouvernements cherchent à interdire l'accès aux services illégaux pour les particuliers, notamment pour les contenus sportifs.</li>
+      </ul>
+
+      <h3 id="economie">5. Économie du piratage IPTV</h3>
+      <ul>
+        <li>Une enquête estime qu'en France 8 millions de boîtiers illégaux sont en circulation, avec un chiffre d'affaires potentiel de 400 millions € par an.</li>
+        <li>Malgré les actions de blocage, la demande persiste, surtout pour les contenus sportifs qui sont souvent morcelés entre différents fournisseurs légitimes.</li>
+        <li>Le coût du piratage pour l'industrie des médias est estimé à plus de 1,5 milliard € par an en France seule.</li>
+      </ul>
+
+      <h3 id="securite">6. Sécurité et risques techniques</h3>
+      <p>La popularité de l'IPTV illégale attire aussi des acteurs malveillants :</p>
+      <ul>
+        <li>Malware Android déguisé en application IPTV, conçu pour voler des informations bancaires via saisie masquée.</li>
+        <li>Télécharger des applications IPTV non officielles expose à d'importants risques de cybersécurité (vol de données, DDoS botnet, phishing).</li>
+        <li>Les services illégaux proposent souvent des versions compromises ou non sécurisées.</li>
+      </ul>
+
+      <h3>7. Usages et comportements utilisateurs en 2026</h3>
+      <ul>
+        <li>La communauté en ligne montre que beaucoup d'abonnés recherchent des services stables et fiables, ce qui reste difficile à trouver dans l'écosystème pirate.</li>
+        <li>Certains rapportent des expériences positives avec des services plus robustes, mais ces avis ne garantissent en rien la légalité de ces offres.</li>
+        <li>La frustration des coûts élevés des offres légales (fragmentation des catalogues, abonnements multiples) pousse certains utilisateurs vers des solutions alternatives.</li>
+      </ul>
+
+      <h3 id="enjeux">8. Enjeux principaux à retenir</h3>
+      <h4>8.1. Juridique et régulation</h4>
+      <p>L'IPTV illégale menace les droits des ayants droit et entraîne des sanctions toujours plus fermes. Les stratégies de blocage, de déréférencement et de contrôle des intermédiaires internet reflètent une approche globale.</p>
+      <h4>8.2. Économique</h4>
+      <p>La coexistence d'une offre légale coûteuse et d'une offre pirate bon marché pose un dilemme pour les consommateurs et une pression sur les modèles économiques traditionnels des médias.</p>
+      <h4>8.3. Technique</h4>
+      <p>Assurer la qualité de service, la sécurité des flux et l'intégration avec les réseaux existants reste un défi pour tous les acteurs IPTV.</p>
+
+      <h3>9. Pourquoi ce sujet ?</h3>
+      <p>J'ai choisi de traiter l'IPTV pour plusieurs raisons :</p>
+      <ul>
+        <li><strong>Technique</strong> : l'IPTV combine des notions essentielles d'architecture réseau, de protocoles de streaming, de CDN, et de DRM. C'est une technologie intéressante pour un étudiant en informatique désireux de comprendre les systèmes distribués et le streaming multimédia.</li>
+        <li><strong>Sécurité et légal</strong> : l'IPTV met en lumière des questions de cybersécurité, d'utilisation éthique des technologies, de droits d'auteur, et de régulation du numérique, qui sont centrales dans le monde digital d'aujourd'hui.</li>
+        <li><strong>Actuel et impactant</strong> : c'est un sujet présent dans l'actualité médiatique, affectant à la fois le secteur économique des médias et le comportement des consommateurs, notamment avec les grands événements sportifs.</li>
+      </ul>
+      <p>En résumé, ce sujet relie mes compétences techniques aux enjeux sociaux, économiques et juridiques actuels du numérique.</p>
+
+      <h3>Sources / Liens hypertexte</h3>
+      <ul>
+        <li><a href="https://www.lebigdata.fr/abonnement-iptv-en-france-le-meilleur-guide-iptv-2026" target="_blank" rel="noopener">📰 Abonnement IPTV en France : le meilleur guide 2026 — LeBigData</a></li>
+        <li><a href="https://lessentieldeleco.fr/5974-iptv-la-lutte-contre-le-piratage-se-durcit/" target="_blank" rel="noopener">📰 IPTV : la lutte contre le piratage se durcit — L'Essentiel de l'Éco</a></li>
+        <li><a href="https://www.clubic.com/television-tv/video-streaming/guide-473970-iptv.html" target="_blank" rel="noopener">📰 Dossier complet sur l'IPTV, légalité et fonctionnement — Clubic</a></li>
+        <li><a href="https://www.arcom.fr/actualites/iptv-pourquoi-certaines-offres-sont-illegales" target="_blank" rel="noopener">📋 IPTV légal et illégal — ARCOM (Autorité de régulation)</a></li>
+        <li><a href="https://www.01net.com/actualites/iptv-illegale-5-000-sites-ont-ete-bloques-depuis-janvier-2025" target="_blank" rel="noopener">📰 5 000 sites IPTV illégaux bloqués depuis janvier 2025 — 01Net</a></li>
+        <li><a href="https://www.lesnumeriques.com/societe-numerique/on-parle-d-un-business-de-400-millions-d-euros-annuels" target="_blank" rel="noopener">📊 Business du piratage IPTV — Les Numériques</a></li>
+      </ul>
+
+    </article>
+
+    <div class="text-center">
+      <a class="btn btn-primary" href="index.html#blog">Retour aux cartes</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="py-4">
+  <div class="container small">
+    © Estebàn Olivero
+  </div>
+</footer>
+
+<script>
+  const obs=new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('show');
+        obs.unobserve(e.target)
+      }
+    })
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+
+<script>
+  (function(){
+    const btn=document.getElementById('theme-toggle');
+    if(!btn) return;
+    const icon=btn.querySelector('i');
+
+    const apply=theme=>{
+      const root=document.documentElement;
+      if(theme==='dark') root.classList.add('dark-mode');
+      else root.classList.remove('dark-mode');
+
+      localStorage.setItem('theme',theme);
+
+      if(icon)
+        icon.className=theme==='dark'
+          ?'bi bi-moon-fill'
+          :'bi bi-sun-fill';
+    };
+
+    const stored=localStorage.getItem('theme');
+    const prefersDark=window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    apply(stored||(prefersDark?'dark':'light'));
+
+    btn.addEventListener('click',()=>{
+      apply(document.documentElement.classList.contains('dark-mode')
+        ?'light'
+        :'dark');
+    });
+  })();
+</script>
+
+</body>
+</html>

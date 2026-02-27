@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Veille IPTV – Estebàn Olivero</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root{--accent:#1677ff}
+
+    .dark-mode body{background:#0b1220;color:#cfe3ff}
+    .dark-mode .navbar{background:rgba(255,255,255,0.02)}
+    .dark-mode .bg-body-tertiary{background:rgba(255,255,255,0.02) !important}
+    .dark-mode .hero-mini{background:linear-gradient(rgba(8,15,40,.85),rgba(8,15,40,.85)),url('intro-bg.jpg') center/cover;color:#fff}
+    .dark-mode .card{background:#0e1530;color:#e6eefc;box-shadow:0 6px 20px rgba(0,0,0,.6)}
+    .dark-mode a{color:#9ecbff}
+    .dark-mode footer{background:#040612;color:#9fb4d9}
+    .dark-mode .alert-info{background-color:rgba(13,110,253,.15);border-color:rgba(13,110,253,.3)}
+    .dark-mode .alert-warning{background-color:rgba(255,193,7,.15);border-color:rgba(255,193,7,.3)}
+    .dark-mode .alert-danger{background-color:rgba(220,53,69,.15);border-color:rgba(220,53,69,.3)}
+    .dark-mode .alert-success{background-color:rgba(25,135,84,.15);border-color:rgba(25,135,84,.3)}
+    .dark-mode .bg-light{background-color:#0e1530 !important}
+
+    .dark-mode .text-muted,
+    .dark-mode .small,
+    .dark-mode p,
+    .dark-mode li,
+    .dark-mode .lead {
+      color: rgba(255,255,255,0.78) !important
+    }
+
+    .dark-mode h1,
+    .dark-mode h2,
+    .dark-mode h3,
+    .dark-mode h4,
+    .dark-mode h5,
+    .dark-mode h6 {
+      color: #e6eefc !important
+    }
+
+    .dark-mode .nav-link,
+    .dark-mode .navbar-brand {
+      color: #e6eefc !important
+    }
+
+    /* Ensure headings with ids are offset below the sticky navbar when navigated via anchor */
+    h3[id], [id]{ scroll-margin-top:6rem; }
+
+    .hero-mini{
+      padding:64px 0;
+      background:linear-gradient(rgba(8,15,40,.7),rgba(8,15,40,.7)),url('intro-bg.jpg') center/cover;
+      color:#fff
+    }
+
+    .reveal{
+      opacity:0;
+      transform:translateY(12px);
+      transition:opacity .6s,transform .6s
+    }
+
+    .show{
+      opacity:1;
+      transform:none
+    }
+
+    footer{
+      background:#0b1220;
+      color:#c9d3e7
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+  <div class="container d-flex align-items-center">
+    <a class="navbar-brand fw-bold" href="index.html#blog">← Portfolio Estebàn</a>
+    <div class="ms-auto d-flex align-items-center gap-2">
+      <a class="btn btn-sm btn-primary" href="index.html#blog">Retour</a>
+      <button id="theme-toggle" class="btn btn-sm btn-outline-secondary" title="Basculer thème">
+        <i class="bi bi-moon-fill"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero-mini text-center">
+  <div class="container">
+    <h1 class="display-6 fw-bold">Veille technologique – IPTV (2026)</h1>
+    <p class="lead">Articles complets : Résumé • Démo/mesure • Analyse • Risques • Applicabilité • Sources</p>
+  </div>
+</header>
+
+<main class="py-5">
+  <div class="container">
+
+    <article class="mb-5 reveal">
+
+      <h2>Veille technologique – IPTV (Internet Protocol Television) — 2026</h2>
+      <p class="text-muted small">mise à jour : février 2026 • auteur : Estebàn Olivero</p>
+
+      <hr class="my-4">
+
+      <h3 id="definition" class="mt-5">1. Qu'est-ce que l'IPTV ?</h3>
+      <p>L'IPTV (Internet Protocol Television) est une technologie permettant de diffuser des contenus audiovisuels via Internet en utilisant le protocole IP, au lieu des modes traditionnels comme le satellite, le câble ou la TNT.</p>
+      
+      <h5 class="fw-bold mt-3">Elle permet de recevoir :</h5>
+      <ul class="list-unstyled ms-3">
+        <li class="mb-2"><i class="bi bi-play-circle text-primary me-2"></i> Des chaînes TV en direct</li>
+        <li class="mb-2"><i class="bi bi-play-circle text-primary me-2"></i> De la vidéo à la demande (VOD)</li>
+        <li class="mb-2"><i class="bi bi-play-circle text-primary me-2"></i> De la télévision différée (replay ou time-shift)</li>
+      </ul>
+
+      <div class="alert alert-info mt-3" role="alert">
+        <strong>⚖️ Important :</strong> La technologie en elle-même est parfaitement légale. Cependant, la légalité dépend du contenu diffusé. Une offre IPTV peut être légale si elle dispose des droits de diffusion, ou illégale si elle diffuse des contenus protégés sans autorisation.
+      </div>
+
+      <hr class="my-5">
+
+      <h3 id="marche" class="mt-5">2. Le marché mondial et les tendances</h3>
+      <p>Le marché mondial de l'IPTV connaît une croissance extrêmement rapide.</p>
+
+      <h5 class="fw-bold mt-3">Chiffres clés</h5>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="card p-3 bg-light">
+            <p class="mb-1 text-muted small">Valeur 2026</p>
+            <h4 class="text-primary">114 Mds USD</h4>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="card p-3 bg-light">
+            <p class="mb-1 text-muted small">Projection 2035</p>
+            <h4 class="text-primary">500+ Mds USD</h4>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="card p-3 bg-light">
+            <p class="mb-1 text-muted small">Part du marché</p>
+            <h4 class="text-primary">46 % VOD</h4>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="card p-3 bg-light">
+            <p class="mb-1 text-muted small">TV en direct</p>
+            <h4 class="text-primary">25 % revenus</h4>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="fw-bold mt-3">Facteurs de croissance</h5>
+      <ul class="ms-3">
+        <li>Multiplication des supports (Smart TV, smartphones, box Android, tablettes)</li>
+        <li>Amélioration des connexions fibre</li>
+        <li>Personnalisation des contenus</li>
+        <li>Modèles d'abonnement flexibles (gratuit avec publicité, premium payant)</li>
+      </ul>
+
+      <p class="mt-3"><em>L'IPTV s'inscrit dans une transformation globale des usages numériques vers le streaming et la consommation à la demande.</em></p>
+
+      <hr class="my-5">
+
+      <h3 id="legalite" class="mt-5">3. Légalité vs illégalité : nuances et réglementation</h3>
+      <p>L'IPTV est une technologie neutre. Le problème apparaît lorsque des services diffusent des contenus protégés sans licence.</p>
+
+      <h5 class="fw-bold mt-3">✅ Ce qui est légal</h5>
+      <ul class="ms-3">
+        <li>Services IPTV officiels avec droits de diffusion (ex : Canal+, Molotov TV, Freebox TV)</li>
+        <li>Plateformes possédant ou ayant acquis les droits des contenus diffusés</li>
+        <li>Applications utilisant des flux autorisés</li>
+      </ul>
+
+      <h5 class="fw-bold mt-3">❌ Ce qui est illégal</h5>
+      <ul class="ms-3">
+        <li>Diffusion de chaînes payantes sans licence</li>
+        <li>Revente d'abonnements pirates à bas prix</li>
+        <li>Utilisation de boîtiers IPTV non autorisés</li>
+      </ul>
+
+      <div class="alert alert-warning mt-3" role="alert">
+        <strong>⚖️ Sanctions :</strong> Ces pratiques constituent une violation des droits d'auteur. Les poursuites peuvent concerner les fournisseurs, les revendeurs, et potentiellement les utilisateurs.
+      </div>
+
+      <hr class="my-5">
+
+      <h3 id="actualite" class="mt-5">4. Actualité : lutte contre les services IPTV illégaux</h3>
+      <p>Depuis 2025, la lutte contre l'IPTV illégale s'intensifie.</p>
+
+      <h5 class="fw-bold mt-3">🇫🇷 En France</h5>
+      <ul class="ms-3">
+        <li><strong>Plus de 5 000 sites bloqués</strong> depuis janvier 2025 par l'ARCOM</li>
+        <li>Blocage DNS et actions contre certains VPN</li>
+        <li>Déréférencement de sites pirates</li>
+      </ul>
+
+      <h5 class="fw-bold mt-3">🔄 Stratégies de contournement</h5>
+      <p>Malgré les efforts, les services illégaux persistent avec :</p>
+      <ul class="ms-3">
+        <li>Nouveaux noms de domaine</li>
+        <li>Hébergement à l'étranger</li>
+        <li>Systèmes de contournement techniques</li>
+      </ul>
+
+      <h5 class="fw-bold mt-3">🌍 En Europe</h5>
+      <p>Des propositions en Suède et ailleurs visent à renforcer la responsabilité des utilisateurs accédant à des flux illégaux, notamment pour les compétitions sportives.</p>
+
+      <hr class="my-5">
+
+      <h3 id="economie" class="mt-5">5. Économie du piratage IPTV</h3>
+      <p>Le phénomène représente un impact économique important.</p>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="card border-danger p-3">
+            <p class="mb-1 text-muted small">Boîtiers illégaux en France</p>
+            <h4 class="text-danger">8 millions</h4>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="card border-danger p-3">
+            <p class="mb-1 text-muted small">CA annuel estimé</p>
+            <h4 class="text-danger">400M€</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-danger mt-3" role="alert">
+        <strong>💰 Impact sur l'industrie :</strong> Plus de 1,5 milliard € de pertes estimées pour l'industrie des médias en France.
+      </div>
+
+      <p class="mt-3">La fragmentation des abonnements légaux (multiples plateformes payantes) encourage certains utilisateurs à se tourner vers des offres illégales regroupant tout le contenu à faible coût.</p>
+
+      <hr class="my-5">
+
+      <h3 id="securite" class="mt-5">6. Sécurité et risques techniques</h3>
+      <p>L'IPTV illégale pose également des risques en cybersécurité.</p>
+
+      <h5 class="fw-bold mt-3">⚠️ Exemples de menaces</h5>
+      <ul class="ms-3">
+        <li><strong>Malware Android</strong> déguisé en application IPTV</li>
+        <li><strong>Vol de données bancaires</strong> via saisie masquée</li>
+        <li><strong>Botnets</strong> utilisant les appareils infectés</li>
+        <li><strong>Phishing</strong> et collecte de données personnelles</li>
+      </ul>
+
+      <div class="alert alert-danger mt-3" role="alert">
+        <strong>🔒 Mise en garde :</strong> Les applications IPTV non officielles peuvent contenir des codes malveillants. L'utilisateur s'expose à des risques importants en matière de protection des données.
+      </div>
+
+      <hr class="my-5">
+
+      <h3 class="mt-5">7. Usages et comportements utilisateurs en 2026</h3>
+      <p>Les tendances montrent :</p>
+      <ul class="ms-3">
+        <li>Recherche de stabilité et qualité de flux</li>
+        <li>Mécontentement face aux abonnements multiples</li>
+        <li>Difficulté à trouver un service pirate réellement fiable</li>
+        <li>Communautés en ligne partageant avis et retours</li>
+      </ul>
+
+      <p class="mt-3"><em>La frustration liée au coût et à la fragmentation du marché légal reste un facteur majeur d'adoption des solutions alternatives.</em></p>
+
+      <hr class="my-5">
+
+      <h3 id="enjeux" class="mt-5">8. Enjeux principaux à retenir</h3>
+
+      <div class="row mt-4">
+        <div class="col-lg-4 mb-3">
+          <div class="card h-100 p-4">
+            <h5 class="fw-bold mb-3"><i class="bi bi-shield-check text-success me-2"></i> Juridique & régulation</h5>
+            <p class="small">Protection des droits d'auteur, renforcement des sanctions, blocages techniques et coopération internationale.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3">
+          <div class="card h-100 p-4">
+            <h5 class="fw-bold mb-3"><i class="bi bi-graph-up text-info me-2"></i> Économique</h5>
+            <p class="small">Pression sur les modèles traditionnels, perte de revenus pour les ayants droit, réorganisation du marché du streaming.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3">
+          <div class="card h-100 p-4">
+            <h5 class="fw-bold mb-3"><i class="bi bi-cpu text-warning me-2"></i> Technique</h5>
+            <p class="small">Gestion des flux à grande échelle, CDN, DRM, qualité de service, latence et sécurisation des infrastructures.</p>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5">
+
+      <h3 class="mt-5">9. Pourquoi ce sujet ?</h3>
+      <p>J'ai choisi ce sujet pour plusieurs raisons.</p>
+
+      <h5 class="fw-bold mt-4"><i class="bi bi-cpu me-2 text-primary"></i> Technique</h5>
+      <p>L'IPTV mobilise des concepts clés :</p>
+      <ul class="ms-3">
+        <li>Architecture réseau</li>
+        <li>Streaming adaptatif</li>
+        <li>Protocoles IP</li>
+        <li>CDN (Content Delivery Network)</li>
+        <li>DRM (Digital Rights Management)</li>
+        <li>Systèmes distribués</li>
+      </ul>
+      <p><em>C'est un excellent cas d'étude pour un étudiant en informatique.</em></p>
+
+      <h5 class="fw-bold mt-4"><i class="bi bi-shield-lock me-2 text-success"></i> Sécurité & légal</h5>
+      <p>Le sujet illustre :</p>
+      <ul class="ms-3">
+        <li>Les enjeux de cybersécurité</li>
+        <li>L'éthique numérique</li>
+        <li>Les droits d'auteur</li>
+        <li>La régulation du numérique</li>
+      </ul>
+
+      <h5 class="fw-bold mt-4"><i class="bi bi-newspaper me-2 text-info"></i> Actuel et impactant</h5>
+      <p>L'IPTV est omniprésente dans l'actualité, notamment lors d'événements sportifs majeurs. Elle impacte à la fois :</p>
+      <ul class="ms-3">
+        <li>L'économie des médias</li>
+        <li>Le comportement des consommateurs</li>
+        <li>Les politiques publiques</li>
+      </ul>
+
+      <div class="alert alert-success mt-4" role="alert">
+        <strong>✨ En résumé :</strong> Ce sujet relie mes compétences techniques aux enjeux sociaux, économiques et juridiques du numérique contemporain.
+      </div>
+
+      <hr class="my-5">
+
+      <h3 class="mt-5">📚 Sources & Liens hypertexte</h3>
+      <ul class="list-unstyled">
+        <li class="mb-3"><a href="https://www.lebigdata.fr/abonnement-iptv-en-france-le-meilleur-guide-iptv-2026" target="_blank" rel="noopener" class="text-decoration-none"><i class="bi bi-newspaper text-primary me-2"></i>Abonnement IPTV en France : le meilleur guide 2026 — LeBigData — 15 janvier 2026</a></li>
+        <li class="mb-3"><a href="https://lessentieldeleco.fr/5974-iptv-la-lutte-contre-le-piratage-se-durcit/" target="_blank" rel="noopener" class="text-decoration-none"><i class="bi bi-newspaper text-primary me-2"></i>IPTV : la lutte contre le piratage se durcit — L'Essentiel de l'Éco — 12 décembre 2025</a></li>
+        <li class="mb-3"><a href="https://www.clubic.com/television-tv/video-streaming/guide-473970-iptv.html" target="_blank" rel="noopener" class="text-decoration-none"><i class="bi bi-newspaper text-primary me-2"></i>Dossier complet sur l'IPTV, légalité et fonctionnement — Clubic — 8 octobre 2025</a></li>
+        <li class="mb-3"><a href="https://www.arcom.fr/actualites/iptv-pourquoi-certaines-offres-sont-illegales" target="_blank" rel="noopener" class="text-decoration-none"><i class="bi bi-file-text text-primary me-2"></i>IPTV légal et illégal — ARCOM (Autorité de régulation) — mise à jour du 3 septembre 2025</a></li>
+        <li class="mb-3"><a href="https://www.01net.com/actualites/iptv-illegale-5-000-sites-ont-ete-bloques-depuis-janvier-2025" target="_blank" rel="noopener" class="text-decoration-none"><i class="bi bi-newspaper text-primary me-2"></i>5 000 sites IPTV illégaux bloqués depuis janvier 2025 — 01Net — 6 février 2026</a></li>
+        <li><a href="https://www.lesnumeriques.com/societe-numerique/on-parle-d-un-business-de-400-millions-d-euros-annuels" target="_blank" rel="noopener" class="text-decoration-none"><i class="bi bi-graph-up text-primary me-2"></i>Business du piratage IPTV — Les Numériques — 21 novembre 2025</a></li>
+      </ul>
+
+    </article>
+
+    <div class="text-center">
+      <a class="btn btn-primary" href="index.html#blog">Retour aux cartes</a>
+    </div>
+
+  </div>
+</main>
+
+<footer class="py-4">
+  <div class="container small">
+    © Estebàn Olivero
+  </div>
+</footer>
+
+<script>
+  const obs=new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('show');
+        obs.unobserve(e.target)
+      }
+    })
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+  // Améliorer le scroll vers les ancres avec gestion de l'offset du navbar
+  function scrollToHash() {
+    if (!window.location.hash) return;
+    const element = document.querySelector(window.location.hash);
+    if (!element) return;
+
+    // compute navbar height as offset (sticky header)
+    const navbar = document.querySelector('.navbar');
+    const navHeight = (navbar && navbar.offsetHeight) ? navbar.offsetHeight : 64;
+
+    // element top relative to document
+    const elementTop = element.getBoundingClientRect().top + window.pageYOffset;
+
+    // small gap after the header
+    const offset = 12;
+    const targetScroll = Math.max(elementTop - navHeight - offset, 0);
+
+    // Smooth scroll
+    window.scrollTo({ top: targetScroll, behavior: 'smooth' });
+  }
+
+  // Appeler au chargement et au changement d'URL
+  window.addEventListener('hashchange', () => setTimeout(scrollToHash, 80));
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => setTimeout(scrollToHash, 80));
+  } else {
+    setTimeout(scrollToHash, 80);
+  }
+</script>
+
+<script>
+  (function(){
+    const btn=document.getElementById('theme-toggle');
+    if(!btn) return;
+    const icon=btn.querySelector('i');
+
+    const apply=theme=>{
+      const root=document.documentElement;
+      if(theme==='dark') root.classList.add('dark-mode');
+      else root.classList.remove('dark-mode');
+
+      localStorage.setItem('theme',theme);
+
+      if(icon)
+        icon.className=theme==='dark'
+          ?'bi bi-moon-fill'
+          :'bi bi-sun-fill';
+    };
+
+    const stored=localStorage.getItem('theme');
+    const prefersDark=window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    apply(stored||(prefersDark?'dark':'light'));
+
+    btn.addEventListener('click',()=>{
+      apply(document.documentElement.classList.contains('dark-mode')
+        ?'light'
+        :'dark');
+    });
+  })();
+</script>
+
+</body>
+</html>

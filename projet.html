@@ -1,0 +1,588 @@
+﻿<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Projets – Estebàn Olivero</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+body {background:#f6f8fc;}
+.hero-mini{padding:64px 0;background:linear-gradient(rgba(8,15,40,.7),rgba(8,15,40,.7)),url('intro-bg.jpg') center/cover;color:#fff;text-align:center;}
+section[id], article[id]{scroll-margin-top:80px;}
+.reveal{opacity:0;transform:translateY(12px);transition:.6s;}
+.show{opacity:1;transform:none;}
+.card-header{background:#0d6efd;color:#fff;}
+footer{background:#0b1220;color:#c9d3e7;}
+ul{margin-bottom:0;}
+.img-small{max-width:300px;}
+/* Dark mode */
+.dark-mode body{background:#0b1220;color:#cfe3ff}
+.dark-mode .navbar{background:rgba(255,255,255,0.02)}
+.dark-mode .bg-body-tertiary{background:rgba(255,255,255,0.02) !important}
+.dark-mode .hero-mini{background:linear-gradient(rgba(8,15,40,.85),rgba(8,15,40,.85)),url('intro-bg.jpg') center/cover;color:#fff}
+.dark-mode .card{background:#0e1530;color:#e6eefc;box-shadow:0 6px 20px rgba(0,0,0,.6)}
+.dark-mode a{color:#9ecbff}
+.dark-mode footer{background:#040612;color:#9fb4d9}
+/* Text color fallbacks */
+.dark-mode .text-muted, .dark-mode .small, .dark-mode p, .dark-mode li, .dark-mode .lead { color: rgba(255,255,255,0.78) !important }
+.dark-mode .section-title, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 { color: #e6eefc !important }
+.dark-mode .nav-link, .dark-mode .navbar-brand { color: #e6eefc !important }
+.dark-mode .badge { color: #e6eefc !important }
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+<div class="container">
+<a class="navbar-brand fw-bold" href="index.html#work">← Portfolio Estebàn</a>
+	<div class="ms-auto d-flex align-items-center gap-2">
+		<button id="theme-toggle" class="btn btn-sm btn-outline-secondary" title="Basculer thème"><i class="bi bi-moon-fill"></i></button>
+	</div>
+</div>
+</nav>
+
+<header class="hero-mini">
+<div class="container">
+<h1 class="display-6 fw-bold">Projets – Fiches détaillées</h1>
+<p class="lead">Chaque projet présenté sous forme de fiche structurée.</p>
+</div>
+</header>
+
+<main class="py-5">
+<div class="container">
+
+<!-- Légende compétences -->
+<div class="alert alert-info small mb-5">
+<strong>Légende compétences :</strong>
+<ul class="mb-0">
+<li><strong>C1 :</strong> Administrer et maintenir des systèmes et réseaux</li>
+<li><strong>C2 :</strong> Sécuriser et protéger les infrastructures</li>
+<li><strong>C3 :</strong> Déployer et configurer des services réseau</li>
+<li><strong>C4 :</strong> Supervision et gestion des performances</li>
+<li><strong>C5 :</strong> Gestion de projet et documentation</li>
+<li><strong>C6 :</strong> Analyse des besoins et conception d'architecture</li>
+</ul>
+</div>
+
+<!-- ===================== -->
+<!-- PROJETS BTS -->
+<!-- ===================== -->
+
+<h2 class="mb-4 border-bottom pb-2">Projets BTS / Professionnels</h2>
+
+<!-- Galerie schémas Project E6 -->
+<div class="row g-3 mb-5">
+  <div class="col-md-6">
+    <a href="infra-ecole/shema-logique.png" target="_blank" rel="noopener">
+      <img src="infra-ecole/shema-logique.png" alt="Schéma logique" class="img-fluid rounded shadow">
+    </a>
+    <p class="small text-muted mt-2 text-center">Schéma logique – E6</p>
+  </div>
+  <div class="col-md-6">
+    <a href="infra-ecole/shema-physique.png" target="_blank" rel="noopener">
+      <img src="infra-ecole/shema-physique.png" alt="Schéma physique" class="img-fluid rounded shadow">
+    </a>
+    <p class="small text-muted mt-2 text-center">Schéma physique – E6</p>
+  </div>
+</div>
+
+<!-- Projet E6 -->
+<article class="card mb-4 reveal">
+<div class="card-header"><i class="bi bi-diagram-3 me-2"></i>Projet E6 – Infrastructure entreprise <span class="badge bg-primary ms-2">BTS – E6</span></div>
+<div class="card-body">
+<h5>1. Contexte</h5>
+<p>Création d'une entité autonome s'appuyant sur le SI existant. Réseau dédié sans NAT, routage statique, DNS d'entreprise (192.168.10.120), passerelle montante 10.21.3.1. Besoin d'un SI complet : annuaire, fichiers, supervision, DMZ Web et sauvegardes.</p>
+<h5>2. Objectifs</h5>
+<ul>
+<li>Concevoir l'architecture réseau (VLAN / DMZ)</li>
+<li>Déployer Proxmox + VMs AD DS / DHCP / DNS / DFS, serveur Web DMZ, Zabbix</li>
+<li>Mettre en place GPO, sauvegardes, documentation et procédures</li>
+</ul>
+<h5>3. Travail réalisé</h5>
+<ul>
+<li>Configuration Switch Cisco 2960 (VLAN 10/20/30/40, trunk port 24)</li>
+<li>Déploiement Proxmox avec ZFS et VMs pour AD, fichiers, Zabbix, Web DMZ</li>
+<li>Création de GPO : lecteurs réseaux, BGInfo, blocage USB non-VIP</li>
+<li>Sauvegardes via vzdump vers NAS avec rétention et tests de restauration</li>
+<li>Configuration firewall et ACL pour limiter les flux inter-VLAN et ouverture 80/443 vers DMZ</li>
+</ul>
+<h5>4. Outils et technologies utilisés</h5>
+<ul>
+<li>Proxmox VE, ZFS, Windows Server (AD/DFS/DHCP/DNS)</li>
+<li>Switch Cisco 2960</li>
+<li>Zabbix pour supervision</li>
+<li>Firewall / ACL (Cisco, pfSense)</li>
+<li>NAS pour sauvegardes</li>
+</ul>
+<h5>5. Compétences mobilisées</h5>
+<p>C1, C2, C3, C4, C5, C6</p>
+<h5>6. Résultats obtenus</h5>
+<ul>
+<li>SI segmenté et fonctionnel</li>
+<li>Services AD/DFS/DHCP/DNS opérationnels</li>
+<li>Supervision Zabbix active avec dashboards et alertes</li>
+<li>Procédures documentées</li>
+</ul>
+<h5>7. Bilan personnel</h5>
+<p>Difficultés liées à la coordination VLAN / ACL et à la compatibilité des services AD. Solutions : tests en lab, documentation étape par étape. Apprentissage : conception réseau complète, mise en place d'un SI segmenté et supervisé.</p>
+</div>
+</article>
+
+<!-- Virtualisation & sauvegardes (Proxmox) -->
+<article id="proj-proxmox" class="card mb-4 reveal">
+<div class="card-header"><i class="bi bi-hdd-network me-2"></i>Virtualisation & sauvegardes (Proxmox) <span class="badge bg-primary ms-2">BTS</span></div>
+<div class="card-body">
+<h5>1. Contexte</h5>
+<p>Plateforme unique pour labos pédagogiques et services internes.</p>
+<h5>2. Objectifs</h5>
+<ul>
+<li>Standardiser le déploiement VM / CT</li>
+<li>RTO cible : 1 heure</li>
+</ul>
+<h5>3. Travail réalisé</h5>
+<ul>
+<li>Planification des jobs vzdump : quotidienne, compression zstd, rétention 30 jours</li>
+<li>Configuration ZFS + scrubs hebdomadaires et stockage NAS NFS avec RAID 6</li>
+<li>Mise en place d'alertes mail + webhook Proxmox sur échecs</li>
+<li>Templates VM avec Cloud-init pour déploiement rapide (<5 min)</li>
+<li>Tests de restauration mensuels documentés</li>
+</ul>
+<h5>4. Outils et technologies utilisés</h5>
+<ul>
+<li>Proxmox VE, ZFS</li>
+<li>NAS NFS pour stockage</li>
+<li>Planificateur et scripts de backup</li>
+</ul>
+<h5>5. Compétences mobilisées</h5>
+<p>C1, C2, C4, C6</p>
+<h5>6. Résultats obtenus</h5>
+<ul>
+<li>Restaurations testées avec succès</li>
+<li>Déploiement rapide via modèles et Cloud-Init</li>
+</ul>
+<h5>7. Bilan personnel</h5>
+<p>Apprentissage approfondi sur Proxmox, ZFS et automatisation des sauvegardes. Difficultés sur la configuration initiale ZFS et scripts de backup, résolues via documentation et tests répétés.</p>
+</div>
+</article>
+
+<!-- Segmentation réseau & sécurité -->
+<article class="card mb-4 reveal">
+<div class="card-header"><i class="bi bi-diagram-2 me-2"></i>Segmentation réseau & sécurité <span class="badge bg-primary ms-2">BTS</span></div>
+<div class="card-body">
+<h5>1. Contexte</h5>
+<p>Réseau plat initial.</p>
+<h5>2. Objectifs</h5>
+<ul>
+<li>Réduction de la surface d'attaque</li>
+<li>Contrôle des flux inter-VLAN</li>
+</ul>
+<h5>3. Travail réalisé</h5>
+<ul>
+<li>Création VLAN 10/20/30/40 avec plan d'adressage /26 et isolation STP BPDU</li>
+<li>Mise en place d'ACL stateless : DNS/DHCP/NTP/HTTPS uniquement inter-VLAN</li>
+<li>Analyse surface d'attaque : réduction 95% (plat → segmenté)</li>
+<li>Tests de validation : scan VLAN crossing (arp-scan), broadcast containment</li>
+<li>Documentation flux autorisés / interdits par VLAN</li>
+</ul>
+<h5>4. Outils et technologies utilisés</h5>
+<ul>
+<li>Switchs Cisco 2960 (VLAN, STP, EtherChannel)</li>
+<li>Firewall pfSense (validation flux)</li>
+<li>Outils : arp-scan, tcpdump, netstat</li>
+</ul>
+<h5>5. Compétences mobilisées</h5>
+<p>C2, C3, C5, C6</p>
+<h5>6. Résultats obtenus</h5>
+<ul>
+<li>Broadcast limité à ~10% du trafic initial</li>
+<li>Sécurité réseau : aucun crossing VLAN détecté</li>
+<li>Isolation confirmée par tests perf (latence inter-VLAN <5ms)</li>
+</ul>
+<h5>7. Bilan personnel</h5>
+<p>Apprentissage : dimensionnement VLAN, impact STP, test de validation. Difficulté ACL bidirectionnelles résolue par approche stateless. Valeur ingénierie : justifier la segmentation par mesures.</p>
+</div>
+</article>
+
+<!-- Supervision & alertes (Zabbix) -->
+<article id="proj-backup" class="card mb-4 reveal">
+<div class="card-header"><i class="bi bi-graph-up me-2"></i>Supervision & alertes (Zabbix) <span class="badge bg-primary ms-2">BTS</span></div>
+<div class="card-body">
+<h5>1. Contexte</h5>
+<p>Infrastructure sans visibilité centralisée.</p>
+<h5>2. Objectifs</h5>
+<ul>
+<li>Supervision complète des ressources</li>
+<li>Alertes pro-actives sur seuils</li>
+<li>Dashboards personnalisés</li>
+</ul>
+<h5>3. Travail réalisé</h5>
+<ul>
+<li>Installation Zabbix + MySQL sur VM dédiée, intégration Grafana</li>
+<li>Discovery automatique LLD (SNMP) pour switchs et serveurs</li>
+<li>Templates personnalisés : CPU/RAM/Disk >90%, Disk I/O, réseau in/out</li>
+<li>Escalades mail : seuil warning → escalade SMS/PagerDuty à critique</li>
+<li>Dashboards avancés : état global, SLA 99.5%, MTTR tracking</li>
+<li>API Zabbix : scripts Bash pour export données RRD</li>
+</ul>
+<h5>4. Outils et technologies utilisés</h5>
+<ul>
+<li>Zabbix 5.0, MySQL, Grafana 7.0+</li>
+<li>SNMP v3 pour switchs Cisco</li>
+<li>Zabbix Agent + scripts personnalisés</li>
+</ul>
+<h5>5. Compétences mobilisées</h5>
+<p>C4, C5, C6</p>
+<h5>6. Résultats obtenus</h5>
+<ul>
+<li>Visibilité centralisée 24/7 de l'infra complète</li>
+<li>MTTR réduit de 2h → 15 min (détection rapide)</li>
+<li>SLA réel : 99.7% (données quantifiées)</li>
+<li>Prédiction pannes via trend analysis</li>
+</ul>
+<h5>7. Bilan personnel</h5>
+<p>Apprentissage monitoring professionnel : correlation, escalade, SLA. Difficultés : thresholds adaptatifs, API Zabbix. Solutions : tuning empirique, scripts réutilisables. Valeur : ROI prouvé (downtime -90%).</p>
+</div>
+</article>
+
+<!-- Services réseau (AD / DNS / DHCP / Fichiers) -->
+<article class="card mb-4 reveal">
+<div class="card-header"><i class="bi bi-hdd me-2"></i>Services réseau (AD / DNS / DHCP / Fichiers) <span class="badge bg-primary ms-2">BTS</span></div>
+<div class="card-body">
+<h5>1. Contexte</h5>
+<p>Besoin d'une infrastructure Microsoft standard pour la gestion d'entreprise.</p>
+<h5>2. Objectifs</h5>
+<ul>
+<li>Authentification centralisée via Active Directory</li>
+<li>Distribution d'adresses IP dynamiques et fiables</li>
+<li>Noms de domaine et résolution</li>
+<li>Partage de fichiers sécurisé</li>
+</ul>
+<h5>3. Travail réalisé</h5>
+<ul>
+<li>Déploiement Forest / Domain AD DS avec OU par métier (Admin, Users, Guests)</li>
+<li>Serveur DHCP : scopes VLAN 10/20/30/40 avec failover (DHCP failover clustering)</li>
+<li>DNS intégré AD + zones de recherche inversée, DNSSEC validation</li>
+<li>DFS Namespaces : \\empresa\sharename → transparence replicas NAS</li>
+<li>GPO appliquées : lecteurs réseau (OU Users), BGInfo contexte utilisateur, blocage USB non-VIP</li>
+<li>Permissions NTFS : Creator Owner VIP accès full, Users accès read-only DFS</li>
+</ul>
+<h5>4. Outils et technologies utilisés</h5>
+<ul>
+<li>Windows Server (AD DS, DHCP, DNS, DFS, Hyper-V)</li>
+<li>Group Policy Editor (GPE)</li>
+<li>Schémas de répertoires (OU)</li>
+</ul>
+<h5>5. Compétences mobilisées</h5>
+<p>C1, C3, C5</p>
+<h5>6. Résultats obtenus</h5>
+<ul>
+<li>Infra centralisée et cohérente</li>
+<li>Authentification unique (SSO implicite)</li>
+<li>Gestion des droits granulaire</li>
+</ul>
+<h5>7. Bilan personnel</h5>
+<p>Apprentissage du déploiement Microsoft standard. Difficultés sur la délégation d'autorisations et forêts multi-domaines. Solutions : déploiement itératif, tests de délégation.</p>
+</div>
+</article>
+
+<!-- Firewall & DMZ (pfSense / segmentation) -->
+<article id="proj-pfsense" class="card mb-4 reveal">
+<div class="card-header"><i class="bi bi-shield-lock me-2"></i>Firewall & DMZ (pfSense) <span class="badge bg-primary ms-2">BTS</span></div>
+<div class="card-body">
+<h5>1. Contexte</h5>
+<p>Infrastructure sans périmètre sécurisé vers l'extérieur.</p>
+<h5>2. Objectifs</h5>
+<ul>
+<li>Protéger le réseau interne (DMZ pour services publics)</li>
+<li>Contrôle complet des entrées/sorties</li>
+<li>Accès distants sécurisés</li>
+</ul>
+<h5>3. Travail réalisé</h5>
+<ul>
+<li>Déploiement pfSense sur Proxmox : 3 vNIC (WAN 10.21.3.0/24, DMZ 192.168.40.0/26, LAN 192.168.10.0/26)</li>
+<li>Segmentation stateful : DMZ (40) pour web public, LAN (10) services internes, Admin (30) restrict</li>
+<li>Règles firewall : deny-by-default, whitelist explicite par service (HTTP/HTTPS/DNS/SSH DMZ only)</li>
+<li>NAT 1:1 pour serveur Web DMZ, PAT pour LAN outbound</li>
+<li>Port forwarding : 80/443 WAN → 192.168.40.20 (Apache DMZ)</li>
+<li>Certificats auto-signés, génération OpenSSL + PKI locale</li>
+</ul>
+<h5>4. Outils et technologies utilisés</h5>
+<ul>
+<li>pfSense, OpenVPN, Suricata (IDS optionnel)</li>
+<li>WebGUI pfSense pour gestion</li>
+</ul>
+<h5>5. Compétences mobilisées</h5>
+<p>C2, C3</p>
+<h5>6. Résultats obtenus</h5>
+<ul>
+<li>Périmètre sécurisé</li>
+<li>Segmentation DMZ opérationnelle</li>
+<li>Accès distants contrôlés</li>
+</ul>
+<h5>7. Bilan personnel</h5>
+<p>Apprentissage : stateful firewalling et NAT complexe. Difficultés sur les règles bidirectionnelles et redirection DMZ. Solutions : diagrammes réseau détaillés et tests itératifs.</p>
+</div>
+</article>
+
+<!-- Sauvegardes & stockage (NAS / ZFS) -->
+<article id="proj-stockage" class="card mb-4 reveal">
+<div class="card-header"><i class="bi bi-cloud-arrow-down me-2"></i>Sauvegardes & stockage (NAS / ZFS) <span class="badge bg-primary ms-2">BTS</span></div>
+<div class="card-body">
+<h5>1. Contexte</h5>
+<p>Données critiques d'entreprise sans protection.</p>
+<h5>2. Objectifs</h5>
+<ul>
+<li>RTO / RPO cibles</li>
+<li>Résilience aux défaillances matérielles</li>
+<li>Historique et versioning</li>
+</ul>
+<h5>3. Travail réalisé</h5>
+<ul>
+<li>Planification jobs vzdump depuis Proxmox : quotidienne 22h UTC, compression zstd, rétention 30j</li>
+<li>Stockage NAS NFS (192.168.10.50:/backup) RAID 6 ZFS avec snapshots hourly</li>
+<li>RPO cible : 24h (daily backup) | RTO cible : <1h via restoration depuis snapshot + cloud-init</li>
+<li>Snapshots ZFS : retention policy automatique (30 daily, 52 weekly, 24 monthly)</li>
+<li>Tests de restauration mensuels documentés (MTTR validation)</li>
+<li>Script monitoring : vérifier intégrité backup via checksum SHA256</li>
+<li>Incident response : procédure restore depuis backup < 30 min</li>
+</ul>
+<h5>4. Outils et technologies utilisés</h5>
+<ul>
+<li>Proxmox (vzdump), ZFS, NFS, TrueNAS / Synology</li>
+<li>Cron et scripts Bash pour automatisation</li>
+</ul>
+<h5>5. Compétences mobilisées</h5>
+<p>C1, C5</p>
+<h5>6. Résultats obtenus</h5>
+<ul>
+<li>Données protégées contre pannes matérielles</li>
+<li>RTO < 1h via sauvegardes incrementales</li>
+<li>Versioning et rollback possibles</li>
+</ul>
+<h5>7. Bilan personnel</h5>
+<p>Apprentissage des bonnes pratiques : 3-2-1 (3 copies, 2 médias, 1 hors-site). Difficultés sur optimisation bandwidth et compression. Solutions : tuning ZFS, monitoring réplication.</p>
+</div>
+</article>
+
+<!-- ===================== -->
+<!-- PROJETS PERSONNELS HOMELAB -->
+<!-- ===================== -->
+
+<h2 class="mt-5 mb-4 border-bottom pb-2">Projets personnels – Homelab</h2>
+
+<!-- Galerie schéma Homelab -->
+<div class="mb-5">
+  <a href="shema-reseau.jpg" target="_blank" rel="noopener">
+    <img src="shema-reseau.jpg" alt="Schéma réseau homelab" class="img-fluid rounded shadow" style="max-width:600px">
+  </a>
+  <p class="small text-muted mt-2">Schéma réseau – Architecture homelab</p>
+</div>
+
+<!-- Architecture réseau -->
+<article class="card mb-4 reveal">
+<div class="card-header"><i class="bi bi-diagram-3 me-2"></i>Architecture réseau – Homelab <span class="badge bg-success ms-2">Personnel</span></div>
+<div class="card-body">
+<h5>1. Contexte</h5>
+<p>Conception d'une infrastructure réseau personnelle segmentée, orientée sécurité et évolutivité.</p>
+<h5>2. Objectifs</h5>
+<ul>
+<li>Centraliser les services autour de pfSense</li>
+<li>Accès sécurisé via VPN</li>
+<li>Préparer la migration 2.5 Gb/s</li>
+</ul>
+<h5>3. Travail réalisé</h5>
+<ul>
+<li>Configuration firewall pfSense et ACL internes</li>
+<li>Configuration VPN OpenVPN et DNS filtrant via AdGuard Home</li>
+</ul>
+<h5>4. Outils et technologies utilisés</h5>
+<ul>
+<li>pfSense, OpenVPN, AdGuard Home</li>
+<li>Switch manageable, NAS, Proxmox</li>
+</ul>
+<h5>5. Compétences mobilisées</h5>
+<p>C1, C2, C3, C4, C5, C6</p>
+<h5>6. Résultats obtenus</h5>
+<ul>
+<li>Accès sécurisé aux services internes et externes</li>
+<li>Réseau segmenté et évolutif</li>
+</ul>
+<h5>7. Bilan personnel</h5>
+<p>Difficultés sur la configuration VPN multi-utilisateurs et ACL complexes, résolues par tests et documentation. Apprentissage : gestion complète d'un homelab sécurisé et modulable.</p>
+</div>
+</article>
+
+<!-- Firewall & VPN -->
+<article id="proj-pfsense" class="card mb-4 reveal">
+<div class="card-header"><i class="bi bi-shield-lock me-2"></i>Firewall & accès distant sécurisé (pfSense) <span class="badge bg-success ms-2">Personnel</span></div>
+<div class="card-body">
+<h5>1. Contexte</h5>
+<p>Mise en place d'une sécurité périmétrique stricte pour protéger les services auto-hébergés.</p>
+<h5>2. Objectifs</h5>
+<ul>
+<li>Contrôle complet des flux entrants et sortants</li>
+<li>Accès distant sécurisé</li>
+</ul>
+<h5>3. Travail réalisé</h5>
+<ul>
+<li>Règles firewall personnalisées selon principe du moindre privilège</li>
+<li>Configuration serveur OpenVPN</li>
+<li>Redirection DNS et filtrage via AdGuard Home</li>
+</ul>
+<h5>4. Outils et technologies utilisés</h5>
+<ul>
+<li>pfSense, OpenVPN, AdGuard Home</li>
+</ul>
+<h5>5. Compétences mobilisées</h5>
+<p>C1, C2, C3, C4</p>
+<h5>6. Résultats obtenus</h5>
+<ul>
+<li>Accès sécurisé, contrôle total des flux</li>
+</ul>
+<h5>7. Bilan personnel</h5>
+<p>Apprentissage sur sécurité périmétrique et VPN. Difficultés sur configuration multi-utilisateur et firewall complexe résolues via tests et documentation.</p>
+</div>
+</article>
+
+<!-- Virtualisation personnelle -->
+<article class="card mb-4 reveal">
+<div class="card-header"><i class="bi bi-cpu me-2"></i>Virtualisation personnelle (Proxmox) <span class="badge bg-success ms-2">Personnel</span></div>
+<div class="card-body">
+<h5>1. Objectifs</h5>
+<ul>
+<li>Lab pour apprentissage continu</li>
+<li>Hébergement de services personnels (Plex, NextCloud, etc.)</li>
+</ul>
+<h5>2. Technologie</h5>
+<p>Hyperviseur Proxmox sur machine dédiée + stockage NAS via NFS.</p>
+<h5>3. Services hébergés</h5>
+<ul>
+<li>Serveurs de démonstration (Windows / Linux / FreeBSD)</li>
+<li>Services applicatifs (Plex, NextCloud, Home Assistant)</li>
+<li>Bases de données (PostgreSQL, MySQL)</li>
+</ul>
+<h5>4. Apprentissages</h5>
+<p>Concepts : live migration, HA, clustering, disaster recovery. Infrastructure as Code (Terraform scripts pour reproductibilité).</p>
+</div>
+</article>
+
+<!-- Monitoring personnel -->
+<article class="card mb-4 reveal">
+<div class="card-header"><i class="bi bi-graph-up me-2"></i>Monitoring & alertes personnelles <span class="badge bg-success ms-2">Personnel</span></div>
+<div class="card-body">
+<h5>1. Objectifs</h5>
+<ul>
+<li>Visibilité sur les ressources</li>
+<li>Notifications en cas d'anomalie</li>
+</ul>
+<h5>2. Stack</h5>
+<p>Prometheus + Grafana pour collecte / visualisation. Alertmanager pour notifications Telegram/Discord.</p>
+<h5>3. Métriques suivies</h5>
+<ul>
+<li>CPU / RAM / Disque (node-exporter)</li>
+<li>Services applicatifs (health checks personnalisés)</li>
+<li>Bande passante réseau</li>
+</ul>
+<h5>4. Apprentissages</h5>
+<p>Time-series database, dashboards dynamiques, alertes personnalisées. Utile pour détecter les failles avant qu'elles impactent les services.</p>
+</div>
+</article>
+
+<!-- Sécurité & DNS -->
+<article class="card mb-4 reveal">
+<div class="card-header"><i class="bi bi-shield-check me-2"></i>Sécurité & DNS (AdGuard Home) <span class="badge bg-success ms-2">Personnel</span></div>
+<div class="card-body">
+<h5>1. Objectifs</h5>
+<ul>
+<li>Filtrage DNS au niveau du réseau</li>
+<li>Blocage de trackers et malwares</li>
+<li>Contrôle parental (optionnel)</li>
+</ul>
+<h5>2. Implémentation</h5>
+<p>AdGuard Home sur VM + upstream vers Cloudflare (1.1.1.1) et Quad9 (9.9.9.9).</p>
+<h5>3. Résultats</h5>
+<ul>
+<li>Blocage de ~30% des requêtes (publicités, tracking)</li>
+<li>Amélioration de la vitesse de navigation (cache local)</li>
+<li>Sécurité renforcée contre malwares connus</li>
+</ul>
+<h5>4. Apprentissages</h5>
+<p>DNS filtering, listes noires, DNSSEC validation. Prise de conscience de l'importance du DNS dans la sécurité.</p>
+</div>
+</article>
+
+</div>
+</main>
+
+<footer class="text-center py-4 text-muted border-top mt-5">
+<div class="container">
+<p class="mb-1">© 2024-2026 Estebàn Olivero</p>
+<p class="small">Système d'information | Cybersécurité | Apprentissage continu</p>
+</div>
+</footer>
+
+<script>
+// Intersection Observer pour animations reveal
+const revealElements = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+revealElements.forEach(el => observer.observe(el));
+</script>
+
+<!-- Theme toggle script -->
+<script>
+(function() {
+  const htmlElement = document.documentElement;
+  const themeToggle = document.getElementById('theme-toggle');
+
+  // Fonction pour mettre à jour l'icône
+  function updateIcon(isDarkMode) {
+    const icon = themeToggle.querySelector('i');
+    if (isDarkMode) {
+      icon.classList.remove('bi-moon-fill');
+      icon.classList.add('bi-sun-fill');
+    } else {
+      icon.classList.remove('bi-sun-fill');
+      icon.classList.add('bi-moon-fill');
+    }
+  }
+
+  // Initialiser depuis localStorage ou préférence système
+  function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      htmlElement.classList.add('dark-mode');
+      updateIcon(true);
+    } else {
+      htmlElement.classList.remove('dark-mode');
+      updateIcon(false);
+    }
+  }
+
+  // Basculer le thème
+  themeToggle.addEventListener('click', () => {
+    const isDark = htmlElement.classList.toggle('dark-mode');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    updateIcon(isDark);
+  });
+
+  initTheme();
+})();
+</script>
+
+</body>
+</html>
+

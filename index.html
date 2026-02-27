@@ -1,0 +1,559 @@
+<!doctype html>
+
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – Estebàn Olivero | BTS SIO SISR</title>
+  <meta name="description" content="Portfolio d'Estebàn Olivero – BTS SIO option SISR. Projets scolaires et professionnels, présentation de l'entreprise d'accueil, veille technologique IPTV, compétences et formation." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root{--accent:#1677ff;--ink:#0b1220}
+    body{color:#222;background:#f8fafc;scroll-behavior:smooth}
+    .navbar{backdrop-filter:saturate(140%) blur(8px)}
+    .hero{min-height:72vh;display:grid;place-items:center;background:linear-gradient(rgba(8,15,40,.65),rgba(8,15,40,.65)),url('intro-bg.jpg') center/cover fixed;color:#fff}
+    .hero h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:800}
+    .section-title{font-weight:800;letter-spacing:.3px}
+    .pill{background:#e7f1ff;color:#0b4cff;border:1px solid #bdd3ff}
+    .card{border:0;box-shadow:0 6px 20px rgba(2,17,61,.06)}
+    .icon-bubble{width:56px;height:56px;border-radius:16px;display:inline-grid;place-items:center;background:#eef5ff;color:var(--accent)}
+    .timeline{border-left:3px solid #e6eefc}
+    .timeline .t-item{position:relative;padding-left:1.25rem;margin-left:.75rem}
+    .timeline .t-item:before{content:"";position:absolute;left:-1.05rem;top:.35rem;width:14px;height:14px;border-radius:50%;background:var(--accent)}
+    .badge-skill{font-size:.85rem;background:#eef5ff;color:#1240d8;border:1px solid #cfe0ff}
+    /* Uniformiser l'apparence des boutons dans les cartes (Work & Veille) */
+    .card .btn.btn-sm,
+    .card span.btn.btn-sm{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:9rem;
+      padding:.32rem .6rem;
+      border-radius:.5rem;
+    }
+    footer{background:#0b1220;color:#c9d3e7}
+    a{color:var(--accent)}
+    /* Animations (reveal + hover lift) */
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+    .show{opacity:1;transform:none}
+    .card:hover{transform:translateY(-4px);transition:transform .25s ease}
+.card {
+  cursor: pointer;
+}
+/* Dark mode styles */
+.dark-mode body{background:#0b1220;color:#cfe3ff}
+.dark-mode .navbar{background:rgba(255,255,255,0.02)}
+.dark-mode .bg-body-tertiary{background:rgba(255,255,255,0.02) !important}
+.dark-mode .bg-white{background:transparent !important;color:inherit}
+.dark-mode .card{background:#0e1530;color:#e6eefc;box-shadow:0 6px 20px rgba(0,0,0,.6)}
+.dark-mode .p-3.border, .dark-mode .p-4.border, .dark-mode .border{border-color:rgba(255,255,255,0.06)}
+.dark-mode .icon-bubble{background:transparent;color:#9ecbff}
+.dark-mode .badge-skill{background:transparent;color:#9ecbff;border-color:rgba(158,203,255,0.08)}
+.dark-mode footer{background:#040612;color:#9fb4d9}
+.dark-mode a{color:#9ecbff}
+.dark-mode .hero{background:linear-gradient(rgba(8,15,40,.85),rgba(8,15,40,.85)),url('intro-bg.jpg') center/cover fixed}
+/* Text color fallbacks for components */
+.dark-mode .text-muted, .dark-mode .small, .dark-mode p, .dark-mode li, .dark-mode .lead { color: rgba(255,255,255,0.75) !important }
+.dark-mode .section-title, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 { color: #e6eefc !important }
+.dark-mode .nav-link, .dark-mode .navbar-brand { color: #e6eefc !important }
+.dark-mode .badge { color: #e6eefc !important }
+</style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Portfolio <span class="text-primary">Estebàn</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#entreprise">Entreprise</a></li>
+          <li class="nav-item"><a class="nav-link" href="#training">Formation</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Veille</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="telechargements.html">Téléchargements</a></li>
+          <li class="nav-item">
+            <button id="theme-toggle" class="btn btn-sm btn-outline-secondary" title="Basculer thème">
+              <i class="bi bi-moon-fill"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero text-center">
+    <div class="container py-5">
+      <span class="badge pill mb-3">BTS SIO – option SISR</span>
+      <h1>Portfolio d'Estebàn Olivero</h1>
+      <p class="lead mb-4">Apprenti technicien systèmes & réseaux – OGEC Lycée Saint‑Denis (Annonay)</p>
+      <a href="#work" class="btn btn-primary btn-lg"><i class="bi bi-gear me-2"></i>Voir mes projets</a>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-5 bg-white">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-5">
+          <div class="card p-3">
+            <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=1200&auto=format&fit=crop" alt="illustration" class="rounded">
+            <div class="mt-3">
+              <h3 class="h5 mb-3">Coordonnées</h3>
+              <ul class="list-unstyled small">
+                <li><i class="bi bi-envelope me-2"></i><a href="mailto:estebanolive0729@gmail.com">estebanolive0729@gmail.com</a></li>
+                <li class="mt-2"><i class="bi bi-telephone me-2"></i>06 24 26 77 35</li>
+                <li class="mt-2"><i class="bi bi-geo-alt me-2"></i>07100 Annonay</li>
+                <li class="mt-2">
+                  <a href="CV.pdf" download class="btn btn-primary btn-sm d-inline-flex align-items-center">
+                  <i class="bi bi-download me-2"></i>Télécharger mon CV (PDF)
+                  </a>
+                </li>
+              </ul>
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <span class="badge badge-skill">Windows Server / AD DS</span>
+                <span class="badge badge-skill">Proxmox / Virtualisation</span>
+                <span class="badge badge-skill">Routage & VLAN (Cisco)</span>
+                <span class="badge badge-skill">Docker</span>
+                <span class="badge badge-skill">Zabbix / Supervision</span>
+                <span class="badge badge-skill">PowerShell / Bash</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <h2 class="section-title mb-3">À propos & rappel du BTS SIO</h2>
+          <p class="mb-3">Le <strong>BTS Services Informatiques aux Organisations (SIO)</strong> forme aux métiers de l’IT autour de deux options :</p>
+          <ul>
+            <li><strong>SISR</strong> – Solutions d’Infrastructure, Systèmes et Réseaux : administration systèmes, réseaux, sécurité, virtualisation, supervision, automatisation.</li>
+            <li><strong>SLAM</strong> – Solutions Logicielles et Applications Métiers : conception et développement d’applications, bases de données, tests.</li>
+          </ul>
+          <p class="mb-4">Je suis orienté <strong>SISR</strong> et j’évolue en alternance au sein du <strong>service informatique</strong> de l’<strong>OGEC Lycée Saint‑Denis</strong> à Annonay en tant qu’<strong>apprenti technicien systèmes & réseaux</strong>.</p>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="p-3 border rounded-3 h-100">
+                <div class="icon-bubble mb-2"><i class="bi bi-building-gear"></i></div>
+                <h3 class="h6">Mon service & mon poste</h3>
+                <ul class="small mb-0">
+                  <li>Contexte établissement d'enseignement – parc d'environ <strong>1200 postes</strong> (pédagogique + admin).</li>
+                  <li>Travail en binôme avec <strong>un collègue référent (mon tuteur)</strong>, participation aux activités quotidiennes du service informatique.</li>
+                  <li>Support <strong>N1/N2</strong> (tickets), préparation & <strong>déploiement de postes</strong>, gestion des comptes AD.</li>
+                  <li><strong>Interface et coordination avec une entreprise prestataire externe</strong>(suivi des interventions, échanges techniques, remontée des incidents).</li>
+                  <li>Amélioration continue du <strong>parc</strong> : GPO, durcissement, supervision <strong>Zabbix</strong>, sauvegardes Proxmox→NAS.</li>
+                  <li>Opérations réseau <strong>VLAN/routage</strong> (Cisco), suivi imprimantes/Wi‑Fi, doc & procédures.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 border rounded-3 h-100">
+                <div class="icon-bubble mb-2"><i class="bi bi-mortarboard"></i></div>
+                <h3 class="h6">Compétences à acquérir (SISR)</h3>
+                <ul class="small mb-0">
+                  <li>Administrer un <strong>réseau</strong> d’entreprise (VLAN, routage, DHCP/DNS, sécurité).</li>
+                  <li>Déployer et maintenir des <strong>services</strong> : AD DS, fichiers/DFS, PKI, proxy, DNS.</li>
+                  <li>Industrialiser : <strong>virtualisation</strong> (Proxmox), <strong>containers</strong> (Docker), <strong>automatisation</strong> (PowerShell/Bash).</li>
+                  <li>Mettre en place la <strong>supervision</strong> (Zabbix) et la <strong>sauvegarde</strong>.</li>
+                  <li>Appliquer les <strong>bonnes pratiques sécurité</strong> (durcissement, mises à jour, journalisation).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="mt-4">
+            <h3 class="h6 text-uppercase text-muted reveal">Parcours (sélection IT)</h3>
+            <div class="timeline">
+              <div class="t-item mb-3">
+                <strong>Depuis août 2024</strong> – Alternance, <em>OGEC Lycée Saint‑Denis</em> – Service informatique.
+              </div>
+              <div class="t-item mb-3">
+                <strong>2024</strong> – Bac Pro <em>Systèmes Numériques</em>, LPP Marc Seguin.
+              </div>
+              <div class="t-item mb-2">
+                <strong>2021</strong> – Brevet des collèges.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- ENTREPRISE D'ACCUEIL -->
+<section id="entreprise" class="py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="section-title reveal">Entreprise d’accueil – Alternance</h2>
+      <p class="text-muted">Présentation de l’établissement et du contexte professionnel</p>
+    </div>
+
+    <div class="row g-4 align-items-center">
+      <!-- Logo -->
+      <div class="col-md-4 text-center">
+        <div class="card p-3 reveal">
+          <img src="sup.png"
+               alt="Logo Lycée Saint-Denis Annonay"
+               class="img-fluid rounded">
+        </div>
+      </div>
+
+      <!-- Contenu -->
+      <div class="col-md-8">
+        <div class="card p-4 reveal h-100">
+          <h3 class="h5">Lycée Saint-Denis – Annonay (OGEC)</h3>
+
+          <p class="small">
+            Le <strong>Lycée Saint-Denis</strong> est un établissement privé sous contrat situé à
+            <strong>Annonay (07100)</strong>. Il accueille des élèves de la voie générale,
+            technologique et professionnelle et s’appuie sur une infrastructure informatique
+            conséquente au service des équipes pédagogiques et administratives.
+          </p>
+
+          <ul class="small">
+            <li><strong>Secteur :</strong> Enseignement privé</li>
+            <li><strong>Structure :</strong> OGEC (Organisme de Gestion de l’Enseignement Catholique)</li>
+            <li><strong>Parc informatique :</strong> Environ <strong>1200 postes</strong></li>
+            <li><strong>Infrastructure :</strong> Active Directory, Proxmox, VLAN, NAS, Wi-Fi</li>
+          </ul>
+
+          <hr>
+
+          <h4 class="h6">Missions réalisées en alternance</h4>
+          <ul class="small mb-0">
+            <li>Support utilisateurs <strong>N1 / N2</strong> (incidents et demandes)</li>
+            <li>Gestion des <strong>comptes Active Directory</strong> et des postes clients</li>
+            <li>Préparation et <strong>déploiement de postes</strong> pédagogiques et administratifs</li>
+            <li>Mise en œuvre de la <strong>supervision Zabbix</strong></li>
+            <li>Participation à l’<strong>administration réseau</strong> (VLAN, routage)</li>
+            <li>Rédaction de <strong>documentation technique</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- TRAINING / SERVICES -->
+  <section id="training" class="py-5">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title reveal">Formation & référentiel SISR</h2>
+        <p class="text-muted">Blocs de compétences BTS SIO – option SISR.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-3">
+          <div class="card h-100 p-3 reveal">
+            <div class="icon-bubble mb-2"><i class="bi bi-hdd-network"></i></div>
+            <h3 class="h6">Infrastructure réseau</h3>
+            <ul class="small">
+              <li>Adressage, VLAN, routage, DHCP/DNS</li>
+              <li>Firewalling & DMZ</li>
+              <li>Wi‑Fi & QoS</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="card h-100 p-3 reveal">
+            <div class="icon-bubble mb-2"><i class="bi bi-cloud-check"></i></div>
+            <h3 class="h6">Systèmes & virtualisation</h3>
+            <ul class="small">
+              <li>Windows Server, Linux</li>
+              <li>Proxmox, sauvegardes NAS</li>
+              <li>AD DS/DFS, proxy, PKI</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="card h-100 p-3 reveal">
+            <div class="icon-bubble mb-2"><i class="bi bi-shield-lock"></i></div>
+            <h3 class="h6">Sécurité</h3>
+            <ul class="small">
+              <li>Durcissement, mises à jour</li>
+              <li>Gestion des accès</li>
+              <li>Journalisation & sauvegardes</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-3">
+          <div class="card h-100 p-3 reveal">
+            <div class="icon-bubble mb-2"><i class="bi bi-terminal"></i></div>
+            <h3 class="h6">Automatisation & supervision</h3>
+            <ul class="small">
+              <li>PowerShell / Bash</li>
+              <li>Docker & CI basique</li>
+              <li>Zabbix, alerting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK: PROJETS -->
+<section id="work" class="py-5 bg-white">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="section-title reveal">Projets professionnels & personnels</h2>
+      <p class="text-muted">Cliquer pour voir la fiche détaillée (nouvelle page).</p>
+      <div class="d-flex justify-content-center gap-2 mb-3">
+        <a class="btn btn-primary btn-sm" href="projet.html"><i class="bi bi-journal-text me-1"></i>Voir tous les projets</a>
+      </div>
+    </div>
+    <div class="row g-4">
+      
+      <!-- Projet 1 : pfSense / sécurité -->
+      <div class="col-md-6 col-lg-4">
+        <a href="projet.html#proj-pfsense" class="text-decoration-none text-reset">
+          <div class="card h-100 reveal">
+            <div class="card-body">
+              <h3 class="h5">pfSense & Sécurité réseau</h3>
+              <p class="small">Firewall personnalisé, VPN OpenVPN, DNS filtrant via AdGuard Home.</p>
+              <div class="mt-2">
+                <span class="badge bg-info text-dark">Firewall</span>
+                <span class="badge bg-info text-dark">VPN</span>
+                <span class="badge bg-info text-dark">DNS filtrant</span>
+              </div>
+              <div class="mt-3">
+                <a class="btn btn-outline-primary btn-sm" href="projet.html#proj-pfsense">
+                  <i class="bi bi-box-arrow-up-right me-1"></i>Voir la fiche
+                </a>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Projet 2 : Proxmox perso -->
+      <div class="col-md-6 col-lg-4">
+        <a href="projet.html#proj-proxmox" class="text-decoration-none text-reset">
+          <div class="card h-100 reveal">
+            <div class="card-body">
+              <h3 class="h5">Virtualisation & VMs Proxmox</h3>
+              <p class="small">VMs dédiées, containers LXC/Docker, snapshots, backups NFS vers NAS, réseaux séparés.</p>
+              <div class="mt-2">
+                <span class="badge bg-success text-dark">VM</span>
+                <span class="badge bg-success text-dark">CT/Docker</span>
+                <span class="badge bg-success text-dark">Backup</span>
+              </div>
+              <div class="mt-3">
+                <a class="btn btn-outline-primary btn-sm" href="projet.html#proj-proxmox">
+                  <i class="bi bi-box-arrow-up-right me-1"></i>Voir la fiche
+                </a>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Projet 3 : Sauvegardes perso -->
+      <div class="col-md-6 col-lg-4">
+        <a href="projet.html#proj-backup" class="text-decoration-none text-reset">
+          <div class="card h-100 reveal">
+            <div class="card-body">
+              <h3 class="h5">Sauvegardes personnelles</h3>
+              <p class="small">Volumes Docker, VMs Proxmox vers NAS, tests de restauration OK.</p>
+              <div class="mt-2">
+                <span class="badge bg-warning text-dark">Docker</span>
+                <span class="badge bg-warning text-dark">VMs</span>
+                <span class="badge bg-warning text-dark">NAS</span>
+              </div>
+              <div class="mt-3">
+                <a class="btn btn-outline-primary btn-sm" href="projet.html#proj-backup">
+                  <i class="bi bi-box-arrow-up-right me-1"></i>Voir la fiche
+                </a>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Projet 4 : Stockage / RAID -->
+      <div class="col-md-6 col-lg-4">
+        <a href="projet.html#proj-stockage" class="text-decoration-none text-reset">
+          <div class="card h-100 reveal">
+            <div class="card-body">
+              <h3 class="h5">Stockage & RAID</h3>
+              <p class="small">RAID1 6To, RAID5 6x2To, projet future baie 2.5Gbit.</p>
+              <div class="mt-2">
+                <span class="badge bg-danger text-white">RAID</span>
+                <span class="badge bg-danger text-white">NAS</span>
+                <span class="badge bg-danger text-white">2.5G</span>
+              </div>
+              <div class="mt-3">
+                <a class="btn btn-outline-primary btn-sm" href="projet.html#proj-stockage">
+                  <i class="bi bi-box-arrow-up-right me-1"></i>Voir la fiche
+                </a>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- VEILLE -->
+<section id="blog" class="py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="section-title reveal">Veille technologique 2026</h2>
+      <p class="text-muted">Article complet : définition, marché, légalité, enjeux, sources.</p>
+      <div class="d-flex justify-content-center gap-2 mb-3">
+        <a class="btn btn-primary btn-sm" href="veille.html">
+          <i class="bi bi-broadcast-pin me-1"></i>
+          Lire l'article complet
+        </a>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Qu'est-ce que l'IPTV -->
+      <div class="col-md-6 col-lg-4">
+        <a href="veille.html#definition" class="d-block text-decoration-none text-reset">
+          <div class="card h-100 p-3 reveal">
+            <div class="icon-bubble mb-2"><i class="bi bi-broadcast"></i></div>
+            <h4 class="h6">Qu'est-ce que l'IPTV ?</h4>
+            <p class="small mb-3">Diffusion vidéo via protocoles IP : Live TV, VOD, TV différée. Technologies et architecture réseau.</p>
+            <span class="btn btn-outline-primary btn-sm">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Découvrir
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Marché & croissance -->
+      <div class="col-md-6 col-lg-4">
+        <a href="veille.html#marche" class="d-block text-decoration-none text-reset">
+          <div class="card h-100 p-3 reveal">
+            <div class="icon-bubble mb-2"><i class="bi bi-graph-up"></i></div>
+            <h4 class="h6">Marché & croissance 2026</h4>
+            <p class="small mb-3">114 Mds USD en 2026 → 500 Mds USD d'ici 2035. VOD dominante, multi-écrans, personnalisation.</p>
+            <span class="btn btn-outline-primary btn-sm">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Analyser
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Légalité vs illégalité -->
+      <div class="col-md-6 col-lg-4">
+        <a href="veille.html#legalite" class="d-block text-decoration-none text-reset">
+          <div class="card h-100 p-3 reveal">
+            <div class="icon-bubble mb-2"><i class="bi bi-shield-exclamation"></i></div>
+            <h4 class="h6">Légalité vs illégalité</h4>
+            <p class="small mb-3">Services officiels légaux. Piratage : 5 000 sites bloqués en France. Risques juridiques croissants.</p>
+            <span class="btn btn-outline-primary btn-sm">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Comprendre
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Actualité & lutte -->
+      <div class="col-md-6 col-lg-4">
+        <a href="veille.html#actualite" class="d-block text-decoration-none text-reset">
+          <div class="card h-100 p-3 reveal">
+            <div class="icon-bubble mb-2"><i class="bi bi-newspaper"></i></div>
+            <h4 class="h6">Actualité & lutte</h4>
+            <p class="small mb-3">Blocage DNS, action contre VPN, durcissement européen (Suède). Renouvellement constant des domaines.</p>
+            <span class="btn btn-outline-primary btn-sm">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Suivre
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Économie du piratage -->
+      <div class="col-md-6 col-lg-4">
+        <a href="veille.html#economie" class="d-block text-decoration-none text-reset">
+          <div class="card h-100 p-3 reveal">
+            <div class="icon-bubble mb-2"><i class="bi bi-cash-coin"></i></div>
+            <h4 class="h6">Économie du piratage</h4>
+            <p class="small mb-3">8M boîtiers illégaux en France. CA potentiel : 400M€/an. Impact : 1,5Md€ pour l'industrie.</p>
+            <span class="btn btn-outline-primary btn-sm">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Étudier
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Enjeux & sécurité -->
+      <div class="col-md-6 col-lg-4">
+        <a href="veille.html#enjeux" class="d-block text-decoration-none text-reset">
+          <div class="card h-100 p-3 reveal">
+            <div class="icon-bubble mb-2"><i class="bi bi-exclamation-triangle"></i></div>
+            <h4 class="h6">Enjeux : Juridique, technique, sécurité</h4>
+            <p class="small mb-3">Droits d'auteur, qualité de service, malware Android. Dilemme coût vs légalité.</p>
+            <span class="btn btn-outline-primary btn-sm">
+              <i class="bi bi-box-arrow-up-right me-1"></i> Approfondir
+            </span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5 bg-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-12">
+          <h2 class="section-title reveal">Me contacter</h2>
+          <p class="text-muted">Ouvert aux opportunités en systèmes & réseaux.</p>
+          <div class="d-flex flex-column gap-2">
+            <div><i class="bi bi-envelope me-2"></i><a href="mailto:estebanolive0729@gmail.com">estebanolive0729@gmail.com</a></div>
+            <div><i class="bi bi-telephone me-2"></i>06 24 26 77 35</div>
+            <div><i class="bi bi-geo-alt me-2"></i>07100 Annonay</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <span class="small">© <span id="year"></span> Estebàn Olivero – BTS SIO SISR</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <script>
+    // Animation d'apparition simple au scroll
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); observer.unobserve(e.target);} });
+    },{threshold:0.12});
+    document.querySelectorAll('.card, .section-title, .icon-bubble').forEach(el=>{el.classList.add('reveal'); observer.observe(el)});
+  </script>
+  <script>
+    (function(){
+      const btn = document.getElementById('theme-toggle');
+      const icon = btn ? btn.querySelector('i') : null;
+      const apply = theme => {
+        const root = document.documentElement;
+        if(theme === 'dark') root.classList.add('dark-mode'); else root.classList.remove('dark-mode');
+        try{ localStorage.setItem('theme', theme); }catch(e){}
+        if(icon) icon.className = theme === 'dark' ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
+      };
+      const stored = (()=>{ try{return localStorage.getItem('theme')}catch(e){return null}})();
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      apply(stored || (prefersDark ? 'dark' : 'light'));
+      if(btn) btn.addEventListener('click', ()=> apply(document.documentElement.classList.contains('dark-mode') ? 'light' : 'dark'));
+    })();
+  </script>
+ 
+</body>
+</html>
